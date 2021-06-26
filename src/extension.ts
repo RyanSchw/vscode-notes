@@ -19,7 +19,24 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.window.showInformationMessage(`Hello World from vscode-notes! [[${vscode.workspace.getConfiguration('notes').get('notesDirectory')}]]`);
 	});
 
+	let directory = vscode.commands.registerCommand('notes.setDirectory', async () => {
+		try {
+			const fileUriArray = await vscode.window.showOpenDialog({
+				canSelectFiles: false,
+				canSelectFolders: true,
+				canSelectMany: false
+			});
+			if (fileUriArray !== undefined) {
+				const filePath = fileUriArray[0].path;
+				vscode.workspace.getConfiguration('notes').update('notesDirectory', filePath, true);
+			}
+		} catch (error) {
+			vscode.window.showErrorMessage('Something went wrong while opening the file browser.');
+		}
+	});
+
 	context.subscriptions.push(disposable);
+	context.subscriptions.push(directory);
 }
 
 // this method is called when your extension is deactivated
