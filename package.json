@@ -1,6 +1,6 @@
 {
-	"name": "notes",
-	"displayName": "vscode-notes",
+	"name": "vscode-notes",
+	"displayName": "Notes",
 	"description": "Keep notes in any local directory with this extension.",
 	"version": "0.0.1",
 	"engines": {
@@ -29,7 +29,31 @@
 					"description": "Location of directory. Please provide full path."
 				}
 			}
-		}
+		},
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "vscode-notes",
+					"title": "Notes",
+					"icon": "content/viewIcon.svg"
+				}
+			]
+		},
+		"views": {
+			"vscode-notes": [
+				{
+					"id": "vscode-notes",
+					"name": "Notes",
+					"icon": "content/viewIcon.svg"
+				}
+			]
+		},
+		"viewsWelcome": [
+			{
+				"view": "vscode-notes",
+				"contents": "Notes directory not set.\n[Set directory](command:notes.setDirectory)"
+			}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",

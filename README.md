@@ -68,3 +68,5 @@ Ensure that you've read through the extensions guidelines and follow the best pr
 * [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
 **Enjoy!**
+
+Special thanks to [Remix Icon](https://remixicon.com/) for the free icon usage.
