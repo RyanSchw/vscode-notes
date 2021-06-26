@@ -19,7 +19,17 @@
 				"command": "notes.helloWorld",
 				"title": "Hello World"
 			}
-		]
+		],
+		"configuration":{
+			"title": "Notes",
+			"properties": {
+				"notes.notesDirectory": {
+					"type": "string",
+					"default": null,
+					"description": "Location of directory. Please provide full path."
+				}
+			}
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
