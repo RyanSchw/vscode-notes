@@ -40,7 +40,7 @@
 				{
 					"id": "vscode-notes",
 					"title": "Notes",
-					"icon": "content/viewIcon.svg"
+					"icon": "resources/viewContainerIcon.svg"
 				}
 			]
 		},
@@ -49,7 +49,7 @@
 				{
 					"id": "vscode-notes",
 					"name": "Notes",
-					"icon": "content/viewIcon.svg"
+					"icon": "resources/viewContainerIcon.svg"
 				}
 			]
 		},
